@@ -1,0 +1,23 @@
+<!-- Author: Nils van der Deen -->
+
+{% extends "base.html" %}
+    
+    {% block content %}
+
+        <!-- simple update actor -->
+
+        <form action="/app/update" method="post">
+            <input type="hidden" name="actor_id" value="{{actor[0][0]}}">
+            <div class="form-group">
+                <label for="name">Actor name</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{ actor[0][1] }}">
+            </div>
+            <div class="form-group">
+                <label for="age">Actor age</label>
+                <input type="text" class="form-control" id="age" name="age" value="{{ actor[0][2] }}">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+
+        
+
+    {% endblock %}
